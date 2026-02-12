@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive shopping website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="productpage.css">
+</head>
+<body>
+    <!-- Navbar Here -->
+    <header>
+        <nav class="navbar flex container">
+            <a href="#" class="logo">
+                Vibe<span>Cart.</span>
+            </a>
+            <ul class="navlist flex">
+                <li>
+                    <a href="#" class="link">HOME</a>
+                </li>
+                <li>
+                    <a href="#" class="link link-active">SHOP</a>
+                </li>
+                <li>
+                    <a href="#" class="link">PAGE</a>
+                </li>
+                <li>
+                    <a href="#" class="link">BLOG</a>
+                </li>
+                <li>
+                    <a href="#" class="link">CONTACT</a>
+                </li>
+                <li class="nav-icons flex">
+                    <a href="#" class="icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </a> <!-- FIXED: Added closing tag -->
+                    <a href="#" class="icon cart-icon">
+                        <i class="fa-solid fa-shopping-bag"></i>
+                        <span class="cart-badge"></span>
+                    </a> <!-- FIXED: Properly closed -->
+                </li>
+            </ul>
+            <a href="#" class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <section class="shop">
+        <h1 class="section-title">Men's Section</h1>
+        <div class="product-content">
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product1.jpg" alt="Casual Black Polo">
+                </div>
+                <h2 class="product-title">Casual Black Polo</h2>
+                <div class="price-and-cart">
+                    <span class="price">₹1200</span>
+                    <a href="#" class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i> </a>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product2.jpg" alt="Waterproof Hoodie">
+                </div>
+                <h2 class="product-title">Waterproof Hoodie</h2> <!-- FIXED: Added opening <h2> tag -->
+                <div class="price-and-cart">
+                    <span class="price">₹1500</span>
+                    <a href="#" class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i> </a>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product3.jpg" alt="Blue Sweatshirt">
+                </div>
+                <h2 class="product-title">Blue Sweatshirt</h2>
+                <div class="price-and-cart">
+                    <span class="price">₹2500</span>
+                    <a href="#" class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i> </a>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product4.jpg" alt="Hooded Urban Jacket">
+                </div>
+                <h2 class="product-title">Hooded Urban Jacket</h2>
+                <div class="price-and-cart">
+                    <span class="price">₹3500</span>
+                    <a href="#" class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i> </a>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product5.jpg" alt="Cold Weather Jacket">
+                </div>
+                <h2 class="product-title">Cold Weather Jacket</h2>
+                <div class="price-and-cart">
+                    <span class="price">₹2500</span>
+                    <a href="#" class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i> </a>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product6.jpg" alt="Sporty Jacket">
+                </div>
+                <h2 class="product-title">Sporty Jacket</h2>
+                <div class="price-and-cart">
+                    <span class="price">₹2500</span>
+                    <a href="#" class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i> </a>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product7.jpg" alt="Olive Heritage Hoodie">
+                </div>
+                <h2 class="product-title">Olive Heritage Hoodie</h2>
+                <div class="price-and-cart">
+                    <span class="price">₹3500</span>
+                    <a href="#" class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i> </a>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product8.jpg" alt="Bright Horizon Polo">
+                </div>
+                <h2 class="product-title">Bright Horizon Polo</h2>
+                <div class="price-and-cart">
+                    <span class="price">₹3000</span>
+                    <a href="#" class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i> </a>
+                </div>
+            </div>
+        </div> <!-- FIXED: Moved to close product-content -->
+    </section>
+</body>
+</html>
