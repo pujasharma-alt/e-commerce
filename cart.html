@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart · VibeCart</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    
+    <!-- ===== HEADER SECTION ===== -->
+    <header>
+        <nav class="navbar flex container">
+            <a href="index.html" class="logo">
+                Vibe<span>Cart.</span>
+            </a>
+            
+            <ul class="navlist flex">
+                <li><a href="index.html" class="link">HOME</a></li>
+                <li><a href="shop.html" class="link link-active">SHOP</a></li>
+                <li><a href="#" class="link">PAGE</a></li>
+                <li><a href="#" class="link">BLOG</a></li>
+                <li><a href="#" class="link">CONTACT</a></li>
+            </ul>
+            
+            <div class="nav-icons flex">
+                <a href="#" class="icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="profile.html" class="icon icon-active">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <a href="cart.html" class="icon cart-icon"> 
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="cart-badge"></span>
+                </a>
+            </div>
+            
+            <a href="#" class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <!-- ===== HEADER END ===== -->
+
+    <!-- ===== MAIN CART SECTION ===== -->
+    <div class="cart-section">
+        <div class="cart-container">
+            
+            <!-- Cart Header with Title & Counter -->
+            <div class="cart-header-title">
+                <h2 class="section-title">
+                    <i class="fas fa-shopping-bag"></i>
+                    Your Shopping Cart
+                </h2>
+                <span class="item-count">
+                    <i class="fas fa-box"></i> 
+                    3 items
+                </span>
+            </div>
+
+            <!-- Cart Grid Layout - 2 Columns -->
+            <div class="cart-grid">
+                
+                <!-- ===== LEFT COLUMN - CART ITEMS ===== -->
+                <div class="cart-items-card">
+                    
+                    <!-- Cart Items -->
+                    <!-- Item 1 -->
+                    <div class="cart-row-item">
+                        
+                        <!-- Product Info - Image & Name -->
+                        <div class="cart-product-col">
+                            <div class="cart-product-img">
+                                <img src="images/product1.jpg" 
+                                     alt="Casual Black Polo"
+                                     onerror="this.src='https://via.placeholder.com/300';">
+                            </div>
+                            <div class="cart-product-detail">
+                                <h4 class="cart-product-title">Casual Black Polo</h4>
+                                <div class="cart-product-meta">
+                                    <span class="cart-product-category">
+                                        Men's Clothing
+                                    </span>
+                                    <span class="cart-product-size">Size: M</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Price Column -->
+                        <div class="cart-price-col">
+                            <span class="cart-price-label">Unit Price</span>
+                            <span class="cart-price-value">₹1,200</span>
+                        </div>
+                        
+                        <!-- Quantity Column -->
+                        <div class="cart-qty-col">
+                            <span class="cart-qty-label">Quantity</span>
+                            <div class="qty-control">
+                                <form method="post" action="#" class="qty-form">
+                                    <div class="qty-wrapper">
+                                        <button type="button" class="qty-btn qty-decrease" onclick="this.parentNode.querySelector('input[name=quantity]').stepDown();">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <input type="number" 
+                                               name="quantity" 
+                                               value="2" 
+                                               min="1" 
+                                               class="qty-input">
+                                        <button type="button" class="qty-btn qty-increase" onclick="this.parentNode.querySelector('input[name=quantity]').stepUp();">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <!-- Total Column -->
+                        <div class="cart-total-col">
+                            <span class="cart-total-label">Item Total</span>
+                            <span class="cart-total-value">₹2,400</span>
+                        </div>
+                        
+                        <!-- Action Column - Remove Button -->
+                        <div class="cart-action-col">
+                            <a href="#" class="cart-remove-btn" title="Remove item">
+                                <i class="fas fa-trash-alt"></i>
+                                <span class="remove-text">Remove</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="cart-row-item">
+                        
+                        <!-- Product Info - Image & Name -->
+                        <div class="cart-product-col">
+                            <div class="cart-product-img">
+                                <img src="images/product4.jpg" 
+                                     alt="Hooded Urban Jacket"
+                                     onerror="this.src='https://via.placeholder.com/300';">
+                            </div>
+                            <div class="cart-product-detail">
+                                <h4 class="cart-product-title">Hooded Urban Jacket</h4>
+                                <div class="cart-product-meta">
+                                    <span class="cart-product-category">
+                                        Men's Clothing
+                                    </span>
+                                    <span class="cart-product-size">Size: 32</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Price Column -->
+                        <div class="cart-price-col">
+                            <span class="cart-price-label">Unit Price</span>
+                            <span class="cart-price-value">₹3,500</span>
+                        </div>
+                        
+                        <!-- Quantity Column -->
+                        <div class="cart-qty-col">
+                            <span class="cart-qty-label">Quantity</span>
+                            <div class="qty-control">
+                                <form method="post" action="#" class="qty-form">
+                                    <div class="qty-wrapper">
+                                        <button type="button" class="qty-btn qty-decrease" onclick="this.parentNode.querySelector('input[name=quantity]').stepDown();">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <input type="number" 
+                                               name="quantity" 
+                                               value="1" 
+                                               min="1" 
+                                               class="qty-input">
+                                        <button type="button" class="qty-btn qty-increase" onclick="this.parentNode.querySelector('input[name=quantity]').stepUp();">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <!-- Total Column -->
+                        <div class="cart-total-col">
+                            <span class="cart-total-label">Item Total</span>
+                            <span class="cart-total-value">₹3,500</span>
+                        </div>
+                        
+                        <!-- Action Column - Remove Button -->
+                        <div class="cart-action-col">
+                            <a href="#" class="cart-remove-btn" title="Remove item">
+                                <i class="fas fa-trash-alt"></i>
+                                <span class="remove-text">Remove</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="cart-row-item">
+                        
+                        <!-- Product Info - Image & Name -->
+                        <div class="cart-product-col">
+                            <div class="cart-product-img">
+                                <img src="images/product6.jpg" 
+                                     alt="Sporty Jacket"
+                                     onerror="this.src='https://via.placeholder.com/300';">
+                            </div>
+                            <div class="cart-product-detail">
+                                <h4 class="cart-product-title">Sporty Jacket</h4>
+                                <div class="cart-product-meta">
+                                    <span class="cart-product-category">
+                                        Outerwear
+                                    </span>
+                                    <span class="cart-product-size">Size: 42</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Price Column -->
+                        <div class="cart-price-col">
+                            <span class="cart-price-label">Unit Price</span>
+                            <span class="cart-price-value">₹2,500</span>
+                        </div>
+                        
+                        <!-- Quantity Column -->
+                        <div class="cart-qty-col">
+                            <span class="cart-qty-label">Quantity</span>
+                            <div class="qty-control">
+                                <form method="post" action="#" class="qty-form">
+                                    <div class="qty-wrapper">
+                                        <button type="button" class="qty-btn qty-decrease" onclick="this.parentNode.querySelector('input[name=quantity]').stepDown();">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <input type="number" 
+                                               name="quantity" 
+                                               value="1" 
+                                               min="1" 
+                                               class="qty-input">
+                                        <button type="button" class="qty-btn qty-increase" onclick="this.parentNode.querySelector('input[name=quantity]').stepUp();">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <!-- Total Column -->
+                        <div class="cart-total-col">
+                            <span class="cart-total-label">Item Total</span>
+                            <span class="cart-total-value">₹2,500</span>
+                        </div>
+                        
+                        <!-- Action Column - Remove Button -->
+                        <div class="cart-action-col">
+                            <a href="#" class="cart-remove-btn" title="Remove item">
+                                <i class="fas fa-trash-alt"></i>
+                                <span class="remove-text">Remove</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Continue Shopping Link inside cart items -->
+                    <div class="cart-footer-link">
+                        <a href="shop.html" class="continue-shopping-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Add More Items
+                        </a>
+                    </div>
+                    
+                </div>
+                
+
+                <!-- ===== RIGHT COLUMN - ORDER SUMMARY ===== -->
+                <div class="cart-summary-card">
+                    
+                    <h3>
+                        <i class="fas fa-receipt"></i> 
+                        Order Summary
+                    </h3>
+                    
+                    <div class="summary-details">
+                        
+                        <!-- Subtotal Row -->
+                        <div class="summary-row">
+                            <span class="summary-label">
+                                <i class="fas fa-tag"></i> Subtotal
+                            </span>
+                            <span class="summary-value">₹6,000</span>
+                        </div>
+                        
+                        <!-- Shipping Row -->
+                        <div class="summary-row">
+                            <span class="summary-label">
+                                <i class="fas fa-truck"></i> Shipping
+                            </span>
+                            <span class="shipping-free">
+                                <i class="fas fa-check-circle"></i> Free
+                            </span>
+                        </div>
+                        
+                        <!-- Discount Row -->
+                        <div class="summary-row discount-row">
+                            <span class="summary-label">
+                                <i class="fas fa-percent"></i> Discount
+                            </span>
+                            <span class="discount-value">—</span>
+                        </div>
+                        
+                        <!-- Promo Code Section -->
+                        <div class="promo-section">
+                            <form method="post" action="#" class="promo-form">
+                                <div class="promo-wrapper">
+                                    <input type="text" name="promo_code" placeholder="Promo code" class="promo-input">
+                                    <button type="submit" class="promo-btn">Apply</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Total Row -->
+                        <div class="summary-row total-row">
+                            <span class="total-label">Total Amount</span>
+                            <span class="total-amount">₹6,000</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Checkout Button -->
+                    <form action="checkout.html" method="post">
+                        <button type="submit" class="checkout-btn">
+                            <i class="fas fa-lock"></i> 
+                            Proceed to Checkout
+                            <i class="fas fa-arrow-right arrow-icon"></i>
+                        </button>
+                    </form>
+                    
+                    <!-- Payment Icons -->
+                    <div class="payment-methods">
+                        <span>We accept:</span>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Secure Checkout Badge -->
+                    <div class="secure-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Checkout</span>
+                    </div>
+                    
+                </div>
+                <!-- ===== RIGHT COLUMN END ===== -->
+                
+            </div>
+            <!-- ===== CART GRID END ===== -->
+            
+        </div>
+    </div>
+    <!-- ===== MAIN CART SECTION END ===== -->
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <footer class="cart-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">Vibe<span>Cart.</span></a>
+                    <p>Your premier shopping destination for trendy and unique products.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Rasulgarh, buneshwar</p>
+                    <p><i class="fas fa-phone"></i> +91 7455384669</p>
+                    <p><i class="fas fa-envelope"></i> support@vibecart.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VibeCart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
