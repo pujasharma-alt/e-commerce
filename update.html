@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product · Retailer Dashboard</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    
+    <!-- ===== FIXED HEADER / NAVBAR ===== -->
+   <header>
+        <nav class="navbar flex container">
+            <a href="#" class="logo">
+                Vibe<span>Cart.</span>
+                <span class="retailer-badge">Retailer</span>
+            </a>
+            
+            <ul class="navlist flex">
+                <li><a href="#" class="link link-active">DASHBOARD</a></li>
+                <li><a href="#" class="link">PRODUCTS</a></li>
+                <li><a href="#" class="link">ORDERS</a></li>
+                <li><a href="#" class="link">CUSTOMERS</a></li>
+                <li><a href="#" class="link">REPORTS</a></li>
+            </ul>
+            
+            <div class="nav-icons flex">
+                <a href="#" class="icon">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </a>
+                <div class="user-profile-dropdown">
+                    <a href="#" class="icon user-profile">
+                        <i class="fa-solid fa-store"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="user-info">
+                                <span class="user-name">Retailer Store</span>
+                                <span class="user-email">store@vibecart.com</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-user-circle"></i> Profile
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-cog"></i> Settings
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout-item">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ===== HEADER END ===== -->
+
+    <!-- ===== MAIN UPDATE PRODUCT SECTION ===== -->
+    <div class="dashboard-section">
+        <div class="dashboard-container">
+            
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">
+                    <i class="fas fa-edit"></i>
+                    Update Product
+                </h1>
+                <div class="header-actions">
+                    <a href="retailer-add-product.html" class="btn btn-outline">
+                        <i class="fas fa-plus"></i>
+                        Add New Product
+                    </a>
+                    <a href="logout.html" class="btn btn-outline logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Update Product Form -->
+            <div class="update-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-pen"></i> Edit Product Details</h3>
+                    <span class="product-id">Product ID: #PRD-10234</span>
+                </div>
+                
+                <form class="update-form" id="updateForm">
+                    
+                    <!-- Product Name -->
+                    <div class="form-group">
+                        <label for="product-name">
+                            <i class="fas fa-tag"></i>
+                            Product Name <span class="required">*</span>
+                        </label>
+                        <input type="text" id="product-name" name="product_name" value="Bright Horizon Polo" placeholder="Enter product name" required>
+                    </div>
+                    
+                    <!-- Price & Tax Row -->
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="product-price">
+                                <i class="fas fa-rupee-sign"></i>
+                                Price (₹) <span class="required">*</span>
+                            </label>
+                            <input type="number" id="product-price" name="price" step="0.01" min="0" value="3,000" placeholder="3,000" required>
+                        </div>
+                        
+                        <div class="form-group half">
+                            <label for="tax-percentage">
+                                <i class="fas fa-percent"></i>
+                                Tax (%)
+                            </label>
+                            <input type="number" id="tax-percentage" name="tax" step="0.1" min="0" max="100" value="20" placeholder="18">
+                        </div>
+                    </div>
+                    
+                    <!-- Description -->
+                    <div class="form-group">
+                        <label for="product-description">
+                            <i class="fas fa-align-left"></i>
+                            Description <span class="required">*</span>
+                        </label>
+                        <textarea id="product-description" name="description" rows="5" placeholder="Enter product description" required>Premium quality cotton t-shirt with comfortable fit. Made from 100% organic cotton. Perfect for everyday wear.</textarea>
+                    </div>
+                    
+                    <!-- Stock Quantity -->
+                    <div class="form-group">
+                        <label for="product-stock">
+                            <i class="fas fa-boxes"></i>
+                            Stock Quantity <span class="required">*</span>
+                        </label>
+                        <input type="number" id="product-stock" name="stock" min="0" value="45" placeholder="Enter quantity" required>
+                    </div>
+                    
+                    <!-- Active Status (Checkbox) -->
+                    <div class="form-group">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="product-active" name="is_active" checked>
+                            <label for="product-active" class="checkbox-label">
+                                <i class="fas fa-toggle-on"></i>
+                                Product is Active (Visible to customers)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Image Upload -->
+                    <div class="form-group">
+                        <label for="product-image">
+                            <i class="fas fa-image"></i>
+                            Product Image
+                        </label>
+                        
+                        <div class="current-image">
+                            <span class="current-image-label">Current Image:</span>
+                            <div class="image-preview">
+                                <img src="images/product8.jpg" alt="Current product">
+                            </div>
+                        </div>
+                        
+                        <div class="image-upload-container">
+                            <div class="upload-area" id="uploadArea">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload or drag & drop</p>
+                                <span class="upload-hint">PNG or JPG only (Max. 2MB)</span>
+                            </div>
+                            <input type="file" id="product-image" name="product_image" accept=".jpg,.jpeg,.png" class="file-input">
+                            <div class="file-name" id="fileName">No file chosen</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Actions -->
+                    <div class="form-actions">
+                        <a href="retailer-products.html" class="btn btn-outline">
+                            <i class="fas fa-times"></i>
+                            Cancel
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i>
+                            Update Product
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+            
+            <!-- Back to Products Link -->
+            <div class="back-link">
+                <a href="retailer-products.html">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to All Products
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // User profile dropdown
+            const userProfile = document.querySelector('.user-profile');
+            const dropdown = document.querySelector('.dropdown-menu');
+            
+            if (userProfile && dropdown) {
+                userProfile.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('show');
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!userProfile.contains(e.target) && !dropdown.contains(e.target)) {
+                        dropdown.classList.remove('show');
+                    }
+                });
+            }
+            
+            // Image upload preview
+            const fileInput = document.getElementById('product-image');
+            const fileName = document.getElementById('fileName');
+            const uploadArea = document.getElementById('uploadArea');
+            
+            if (fileInput) {
+                fileInput.addEventListener('change', function() {
+                    if (this.files && this.files[0]) {
+                        const file = this.files[0];
+                        fileName.textContent = file.name;
+                        
+                        // Check file type
+                        const fileType = file.type;
+                        if (!fileType.match('image/jpeg') && !fileType.match('image/png')) {
+                            alert('Please upload only JPG or PNG files');
+                            this.value = '';
+                            fileName.textContent = 'No file chosen';
+                        }
+                        
+                        // Check file size (2MB max)
+                        if (file.size > 2 * 1024 * 1024) {
+                            alert('File size must be less than 2MB');
+                            this.value = '';
+                            fileName.textContent = 'No file chosen';
+                        }
+                    } else {
+                        fileName.textContent = 'No file chosen';
+                    }
+                });
+                
+                uploadArea.addEventListener('click', function() {
+                    fileInput.click();
+                });
+            }
+            
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navlist = document.querySelector('.navlist');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    navlist.classList.toggle('active');
+                });
+            }
+            
+            // Form submission
+            const updateForm = document.getElementById('updateForm');
+            if (updateForm) {
+                updateForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Product updated successfully!');
+                    window.location.href = 'retailer-products.html';
+                });
+            }
+            
+            // Logout confirmation
+            const logoutBtn = document.querySelector('.logout-btn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (confirm('Are you sure you want to logout?')) {
+                        window.location.href = this.href;
+                    }
+                });
+            }
+            
+            // Cancel confirmation
+            const cancelBtn = document.querySelector('.btn-outline[href="retailer-products.html"]');
+            if (cancelBtn) {
+                cancelBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (confirm('Discard changes and go back?')) {
+                        window.location.href = this.href;
+                    }
+                });
+            }
+        });
+    </script>
+    
+</body>
+</html>
