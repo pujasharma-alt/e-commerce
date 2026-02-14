@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="ordersummary.css">
+    <link rel="stylesheet" href="adminordersummary.css">
 </head>
 <body>
     
@@ -148,7 +148,23 @@
                         </div>
                         
                         <!-- Status Update Dropdown -->
-                        
+                        <div class="status-update">
+                            <label for="orderStatus"><i class="fas fa-pen"></i> Update Status:</label>
+                            <div class="status-select-wrapper">
+                                <select id="orderStatus" class="status-select">
+                                    <option value="pending">Pending</option>
+                                    <option value="confirmed">Confirmed</option>
+                                    <option value="processing">Processing</option>
+                                    <option value="shipped" selected>Shipped</option>
+                                    <option value="out-for-delivery">Out for Delivery</option>
+                                    <option value="delivered">Delivered</option>
+                                    <option value="cancelled">Cancelled</option>
+                                </select>
+                                <button class="btn btn-small btn-outline" id="updateStatusBtn">
+                                    <i class="fas fa-sync-alt"></i> Update
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Shipping Information Card -->
@@ -313,8 +329,8 @@
                     <!-- Action Buttons -->
                     <div class="order-actions">
                         <a href="shop.html" class="btn btn-outline">
-                            <i class="fas fa-shopping-bag"></i>
-                            Shop Again
+                            <i class="fas fa-list"></i>
+                            Back to Portal
                         </a>
                         <button class="btn btn-primary" id="trackOrderBtn">
                             <i class="fas fa-map-marker-alt"></i>
@@ -326,28 +342,7 @@
                 
             </div>
             
-            <!-- You Might Also Like Section -->
-            <div class="related-section">
-                <h3 class="related-title">You might also like</h3>
-                <div class="related-products">
-                    <div class="related-product">
-                        <span class="related-name">Leather Wallet</span>
-                        <span class="related-price">₹4,999</span>
-                    </div>
-                    <div class="related-product">
-                        <span class="related-name">Sunglasses</span>
-                        <span class="related-price">₹1,899</span>
-                    </div>
-                    <div class="related-product">
-                        <span class="related-name">Watch</span>
-                        <span class="related-price">₹4,999</span>
-                    </div>
-                    <div class="related-product">
-                        <span class="related-name">Backpack</span>
-                        <span class="related-price">₹2,499</span>
-                    </div>
-                </div>
-            </div>
+            
             
         </div>
     </main>

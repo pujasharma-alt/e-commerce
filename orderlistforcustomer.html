@@ -12,54 +12,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="orderlist.css">
+    <link rel="stylesheet" href="orderlistforcustomer.css">
 </head>
 <body>
     
-    <!-- ===== FIXED HEADER / NAVBAR (RETAILER VIEW) ===== -->
+    <!-- ===== HEADER SECTION ===== -->
     <header>
         <nav class="navbar flex container">
-            <a href="retailer-dashboard.html" class="logo">
+            <a href="index.html" class="logo">
                 Vibe<span>Cart.</span>
-                <span class="retailer-badge">Retailer</span>
             </a>
             
             <ul class="navlist flex">
-                <li><a href="retailer-dashboard.html" class="link">DASHBOARD</a></li>
-                <li><a href="retailer-products.html" class="link">PRODUCTS</a></li>
-                <li><a href="retailer-orders.html" class="link link-active">ORDERS</a></li>
-                <li><a href="retailer-customers.html" class="link">CUSTOMERS</a></li>
+                <li><a href="index.html" class="link">HOME</a></li>
+                <li><a href="shop.html" class="link link-active">SHOP</a></li>
+                <li><a href="#" class="link">PAGE</a></li>
+                <li><a href="#" class="link">BLOG</a></li>
+                <li><a href="#" class="link">CONTACT</a></li>
             </ul>
             
             <div class="nav-icons flex">
                 <a href="#" class="icon">
-                    <i class="fa-solid fa-bell"></i>
-                    <span class="notification-badge">8</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
-                <div class="user-profile-dropdown">
-                    <a href="#" class="icon user-profile">
-                        <i class="fa-solid fa-store"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-header">
-                            <div class="user-info">
-                                <span class="user-name">Retailer Store</span>
-                                <span class="user-email">store@vibecart.com</span>
-                            </div>
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <a href="retailer-profile.html" class="dropdown-item">
-                            <i class="fas fa-user-circle"></i> Profile
-                        </a>
-                        <a href="retailer-settings.html" class="dropdown-item">
-                            <i class="fas fa-cog"></i> Settings
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="logout.html" class="dropdown-item logout-item">
-                            <i class="fas fa-sign-out-alt"></i> Logout
-                        </a>
-                    </div>
-                </div>
+                <a href="profile.html" class="icon icon-active">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <a href="cart.html" class="icon cart-icon"> 
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="cart-badge"></span>
+                </a>
             </div>
             
             <a href="#" class="hamburger">
@@ -93,85 +75,7 @@
                     </button>
                 </div>
             </div>
-            
-            <!-- Filter Bar -->
-            <div class="filter-bar">
-                <div class="filter-tabs">
-                    <button class="filter-tab active">All Orders</button>
-                    <button class="filter-tab">Pending</button>
-                    <button class="filter-tab">Processing</button>
-                    <button class="filter-tab">Confirmed</button>
-                    <button class="filter-tab">Completed</button>
-                    <button class="filter-tab">Cancelled</button>
-                </div>
-                <div class="filter-date">
-                    <select class="date-filter">
-                        <option value="all">All Time</option>
-                        <option value="today">Today</option>
-                        <option value="week">This Week</option>
-                        <option value="month">This Month</option>
-                        <option value="year">This Year</option>
-                    </select>
-                </div>
-            </div>
-            
-            <!-- Orders Summary Cards -->
-            <div class="orders-summary">
-                <div class="summary-card">
-                    <div class="summary-icon total">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <div class="summary-content">
-                        <span class="summary-label">Total Orders</span>
-                        <span class="summary-value">156</span>
-                    </div>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon pending">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="summary-content">
-                        <span class="summary-label">Pending</span>
-                        <span class="summary-value">23</span>
-                    </div>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon processing">
-                        <i class="fas fa-spinner"></i>
-                    </div>
-                    <div class="summary-content">
-                        <span class="summary-label">Processing</span>
-                        <span class="summary-value">31</span>
-                    </div>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon confirmed">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="summary-content">
-                        <span class="summary-label">Confirmed</span>
-                        <span class="summary-value">42</span>
-                    </div>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon completed">
-                        <i class="fas fa-check-double"></i>
-                    </div>
-                    <div class="summary-content">
-                        <span class="summary-label">Completed</span>
-                        <span class="summary-value">48</span>
-                    </div>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon cancelled">
-                        <i class="fas fa-times-circle"></i>
-                    </div>
-                    <div class="summary-content">
-                        <span class="summary-label">Cancelled</span>
-                        <span class="summary-value">12</span>
-                    </div>
-                </div>
-            </div>
+
             
             <!-- Orders Table -->
             <div class="orders-table-card">
@@ -199,7 +103,7 @@
                                     <span class="order-id">#ORD-10234</span>
                                 </td>
                                 <td class="customer-cell">John Michael Doe</td>
-                                <td class="price-cell">$289.96</td>
+                                <td class="price-cell">₹2,989.96</td>
                                 <td class="status-cell">
                                     <span class="status-badge completed">Completed</span>
                                 </td>
@@ -217,7 +121,7 @@
                                     <span class="order-id">#ORD-10235</span>
                                 </td>
                                 <td class="customer-cell">Sarah Johnson</td>
-                                <td class="price-cell">$156.50</td>
+                                <td class="price-cell">₹1,156.50</td>
                                 <td class="status-cell">
                                     <span class="status-badge confirmed">Confirmed</span>
                                 </td>
@@ -235,7 +139,7 @@
                                     <span class="order-id">#ORD-10236</span>
                                 </td>
                                 <td class="customer-cell">Michael Chen</td>
-                                <td class="price-cell">$394.93</td>
+                                <td class="price-cell">₹3,394.93</td>
                                 <td class="status-cell">
                                     <span class="status-badge processing">Processing</span>
                                 </td>
@@ -253,7 +157,7 @@
                                     <span class="order-id">#ORD-10237</span>
                                 </td>
                                 <td class="customer-cell">Emily Rodriguez</td>
-                                <td class="price-cell">$79.99</td>
+                                <td class="price-cell">₹4,679.99</td>
                                 <td class="status-cell">
                                     <span class="status-badge pending">Pending</span>
                                 </td>
@@ -271,7 +175,7 @@
                                     <span class="order-id">#ORD-10238</span>
                                 </td>
                                 <td class="customer-cell">David Smith</td>
-                                <td class="price-cell">$524.97</td>
+                                <td class="price-cell">₹2,524.97</td>
                                 <td class="status-cell">
                                     <span class="status-badge completed">Completed</span>
                                 </td>
@@ -289,7 +193,7 @@
                                     <span class="order-id">#ORD-10239</span>
                                 </td>
                                 <td class="customer-cell">Jessica Lee</td>
-                                <td class="price-cell">$189.95</td>
+                                <td class="price-cell">₹1,899.95</td>
                                 <td class="status-cell">
                                     <span class="status-badge processing">Processing</span>
                                 </td>
@@ -307,7 +211,7 @@
                                     <span class="order-id">#ORD-10240</span>
                                 </td>
                                 <td class="customer-cell">Robert Taylor</td>
-                                <td class="price-cell">$67.50</td>
+                                <td class="price-cell">₹1,867.50</td>
                                 <td class="status-cell">
                                     <span class="status-badge cancelled">Cancelled</span>
                                 </td>
@@ -325,7 +229,7 @@
                                     <span class="order-id">#ORD-10241</span>
                                 </td>
                                 <td class="customer-cell">Amanda White</td>
-                                <td class="price-cell">$345.00</td>
+                                <td class="price-cell">₹3,450.00</td>
                                 <td class="status-cell">
                                     <span class="status-badge confirmed">Confirmed</span>
                                 </td>
@@ -343,7 +247,7 @@
                                     <span class="order-id">#ORD-10242</span>
                                 </td>
                                 <td class="customer-cell">Kevin Brown</td>
-                                <td class="price-cell">$129.99</td>
+                                <td class="price-cell">₹1,299.99</td>
                                 <td class="status-cell">
                                     <span class="status-badge pending">Pending</span>
                                 </td>
@@ -361,7 +265,7 @@
                                     <span class="order-id">#ORD-10243</span>
                                 </td>
                                 <td class="customer-cell">Lisa Anderson</td>
-                                <td class="price-cell">$89.97</td>
+                                <td class="price-cell">₹899.97</td>
                                 <td class="status-cell">
                                     <span class="status-badge completed">Completed</span>
                                 </td>
